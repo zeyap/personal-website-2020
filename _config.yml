@@ -1,0 +1,59 @@
+#
+###################################
+# Site wide configuration
+####################################
+#
+title: zeyap
+email: zeyapeng@outlook.com
+description: A simple and awesome blog theme powered by jekyll.
+url: https://zeyap.github.io # the base hostname & protocol for your site
+keywords: []
+
+#
+###################################
+# Jekyll configuration
+####################################
+#
+timezone:          Asia/Hong_Kong
+markdown:          kramdown
+highlighter:       rouge
+excerpt_separator: <!--more-->
+permalink:         /articles/:year-:month/:title
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
+#
+###################################
+# Site Owner configuration
+####################################
+#
+owner:
+  name: zeyap
+  avatar: leonids-logo.png
+  job: "Frontend Developer"
+  bio: "A web developer & UX technologist. Ithaca, NY / Hangzhou, China"
+  email: zeyapeng@outlook.com
+  github: zeyap #username
+  linkedin: zeya-peng-5277629b #username
+  google:
+    plus: #username
+    analytics: UA-110465258-1
+  xing: #username
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: pzzzzzy #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+  codepen: #username
+  telegram: #username
