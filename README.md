@@ -1,9 +1,22 @@
-Doing LeetCode problems in JavaScript.
 
-[Array Problems](http://zeyap.github.io/articles/2018-06/array)
+# zeyap.github.io
 
-[Bitwise Operation](http://zeyap.github.io/articles/2018-06/bitwise)
+> A Vue.js project
 
-[Binary Tree Traversal](http://zeyap.github.io/articles/2018-06/tree-traversal)
+## Build Setup
 
-[String Problems](http://zeyap.github.io/articles/2018-06/string)
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
