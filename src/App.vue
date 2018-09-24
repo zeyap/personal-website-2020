@@ -1,7 +1,8 @@
 // eslint-disable-next-line
 <template>
   <div id="app">
-    <FAB style="z-index:2" type="fade-through" border="true" color="#f197a3" v-bind:position="{left:'30px',top:'30px'}"/>
+    <FAB style="z-index:2" type="fade-through" border="true" color="#f197a3" v-bind:position="{left:'30px',top:'30px'}"><div>zp82 @ cornell.edu</div>
+    <div>Ithaca NY</div></FAB>
     <TweenWrapper border="true" radius="20px" v-bind:color="colors" button_number="3" style="z-index:0" v-bind:position="{bottom:'40px'}">
       <router-view/>
     </TweenWrapper>
@@ -18,7 +19,7 @@ export default {
   },
   data(){
     return {
-      colors:['#ffffff','#e3c0c0','#446594']
+      colors:['#ffffff','#f197a3','#446594']//#e3c0c0
     }
   }
 }
