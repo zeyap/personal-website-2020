@@ -1,30 +1,17 @@
-// eslint-disable-next-line
 <template>
   <div id="app">
-    <FAB style="z-index:2" type="fade-through" border="true" color="#f197a3" v-bind:position="{left:'30px',top:'30px'}"><div>zp82 @ cornell.edu</div>
+    <FAB style="z-index:2" type="fade-through" border="true" color="#e26181" v-bind:position="{left:'40px',top:'40px'}"><div>zp82 @ cornell.edu</div>
     <div>Ithaca NY</div></FAB>
-    <TweenWrapper border="true" radius="20px" v-bind:color="colors" button_number="3" style="z-index:0" v-bind:position="{bottom:'40px'}">
-      <div class="router-wrapper" >
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        
-        Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 B
-        
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+    <div class="page-title">{{pageTitle}}</div>
 
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        
-        Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 B
-        
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        
-        Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 B
-        
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-      <router-view/>
-      </div>
+    <TweenWrapper border="true" radius="20px" v-bind:color="colors" button_number="3" style="z-index:0" v-bind:position="{bottom:'40px'}"
+    v-bind:urls="urls" v-bind:on_mouseover_fns="onMouseover">
     </TweenWrapper>
+
+    <div class="router-wrapper">
+      <router-view/>
+    </div>
+    
   </div>
 </template>
 
@@ -38,8 +25,35 @@ export default {
   },
   data(){
     return {
-      colors:['#ffffff','#f197a3','#446594']//#e3c0c0
+      colors:['#ffffff','#e26181','#446594'],//#e3c0c0
+      urls:["/","/project/","/contact/"],
+      pageTitle: 'ZEYA PENG',
+      mouseoverQueue: [],
+      onMouseover:[(function(){
+        this.pageTitle='RESUME';
+        this.recoverName();
+      }).bind(this),
+      (function(){
+        this.pageTitle='PROJECT';
+        this.recoverName();
+      }).bind(this),
+      (function(){
+        this.pageTitle='CONTACT';
+        this.recoverName();
+      }).bind(this)],
+      recoverName:function(){
+        while(this.mouseoverQueue.length>0){
+          window.clearTimeout(this.mouseoverQueue.pop());
+        }
+        
+        this.mouseoverQueue.push(window.setTimeout((function(){
+          this.pageTitle = 'ZEYA PENG';
+        }).bind(this),2000));
+      }
     }
+  },
+  methods:{
+
   }
 }
 </script>
@@ -49,11 +63,27 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: relative;
+  font-size: 18px;
+  color: #444444;
+
+  /* text-align:justify; */
+}
+
+.page-title{
+  color: #cccccc;
+  z-index: 2;
+  position: absolute;
+  top: 40px;
+  right: 80px;
+  font-size: 28px;
 }
 
 .router-wrapper{
-  width: 80vw;
+  margin: 120px 40px 80px 40px;
+  position: absolute;
+  top: 0px;
+  width: calc(100vw - 80px);
+  height: calc(100% - 200px);
   overflow: auto;
   /* display: flex;
   flex-flow: row-reverse wrap;
