@@ -15,6 +15,11 @@ export default new Router({
       component: Resume
     },
     {
+      path: '/resume',
+      name: 'Resume',
+      component: Resume
+    },
+    {
       path: '/contact',
       name: 'Contact',
       component: Contact

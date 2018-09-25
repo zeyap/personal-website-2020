@@ -74,8 +74,9 @@ export default {
   z-index: 2;
   position: absolute;
   top: 40px;
-  right: 80px;
+  right: 40px;
   font-size: 28px;
+  font-weight: bolder;
 }
 
 .router-wrapper{
