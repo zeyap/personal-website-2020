@@ -1,6 +1,5 @@
 package-lock.json
 /node_modules/
-/config/
 /.vscode/
 /build/
 .DS_Store
