@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <FAB style="z-index:2" type="fade-through" border="true" color="#e26181" v-bind:position="{left:'40px',top:'40px'}"><div>zp82 @ cornell.edu</div>
-    <div>Ithaca NY</div></FAB>
+    <FAB style="z-index:2" type="fade-through" border="true" color="#e26181" v-bind:position="{left:'40px',top:'30px'}">
+      <div ><v-icon name="envelope"/> zp82 @ cornell.edu</div>
+      <div><v-icon name="link"/> zeyap.xyz</div>
+      <div><v-icon name="brands/github"/> github.com/zeyap</div></FAB>
     <div class="page-title">{{pageTitle}}</div>
 
     <TweenWrapper border="true" radius="20px" v-bind:color="colors" button_number="3" style="z-index:0" v-bind:position="{bottom:'40px'}"
@@ -17,11 +19,15 @@
 
 <script>
 import {TweenWrapper,FAB} from '../../vue-material/src/index.js'
+
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon'
 export default {
   name: 'App',
   components:{
     TweenWrapper,
-    FAB
+    FAB,
+    'v-icon':Icon
   },
   data(){
     return {
@@ -80,16 +86,21 @@ export default {
 }
 
 .router-wrapper{
-  margin: 120px 40px 80px 40px;
+  margin: 120px 0 80px 0;
   position: absolute;
   top: 0px;
-  width: calc(100vw - 80px);
+  width: calc(100vw);
   height: calc(100% - 200px);
   overflow: auto;
-  /* display: flex;
-  flex-flow: row-reverse wrap;
-  justify-content: flex-start;
-  align-items: flex-start; */
   
 }
+
+.router-wrapper::-webkit-scrollbar{
+  width: 0.5em;
+  background-color: white;
+}
+.router-wrapper::-webkit-scrollbar-thumb{
+  background-color: #cccccc;
+}
+
 </style>
