@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 <template>
-  <div class="resume">
-    <div class="resume-col">
+  <div class="resume" ref="resume">
+    <div class="resume-col" ref="resume-col-l">
       <div v-for="(edu,key) in education" v-bind:key="'edu'+key" class="edu">
         <h1 class="h1-left" v-if="key==0">EDUCATION</h1>
         <h2>{{edu.name}}</h2>
@@ -18,7 +18,7 @@
       </div>
       </div>
 
-      <div class="resume-col">
+      <div class="resume-col" ref="resume-col-r">
       <div v-for="(exp,key) in experience" v-bind:key="'exp'+key" class="exp">
         <h1 class="h1-right" v-if="key==0">EXPERIENCE</h1>
         <h2 class="font-dark">{{exp.name}}</h2>
@@ -47,6 +47,7 @@
 
 <script>
 import resume from '../assets/resume.json'
+import {addScrollListener,clearRouterviewComponent} from '../util.js'
 
 export default {
   name: 'Resume',
@@ -55,8 +56,21 @@ export default {
       skills: resume.skills,
       education: resume.education,
       experience: resume.experience,
-      projects: resume.projects
+      projects: resume.projects,
+      lastScrollTop:[]
     }
+  },
+  mounted(){
+    [this.$refs['resume-col-l'],this.$refs['resume-col-r']].forEach((target,id)=>{
+      addScrollListener.bind(this)(target,id);
+    })
+
+    setTimeout((function(){
+      this.$refs.resume.style.opacity = 1;
+    }).bind(this),200)
+  },
+  beforeDestroy(){
+    clearRouterviewComponent();
   }
 }
 </script>
@@ -68,12 +82,13 @@ export default {
   flex-flow: row nowrap;
   justify-content:flex-start;
   align-items:flex-start;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .resume-col:first-of-type{
   min-width: 18em;
   width: 50em;
-  height: calc(100vh - 200px);
   display: flex;
   flex-flow: row wrap;
   overflow: auto;
@@ -101,10 +116,11 @@ export default {
   display: inline-block;
 }
 .resume-col{
-  height: calc(100vh - 200px);
+  height: calc(100vh - 110px);
   overflow: auto;
-  padding: 0 40px 0 20px;
+  padding: 0 40px 0 30px;
   /* width: calc(100px - 20em); */
+  transition: all 0.5s;
 }
 
 h1{
@@ -155,8 +171,9 @@ h2{
 .project{
   width: 20em;
   padding: 1em;
-  margin: 0 1em 1em 0;
-  border: solid 1px #446594;
+  margin: 1em 1em 1em 0;
+  border: solid 1px #dddddd;
+  box-shadow: 2px 4px 5px #eeeeee;
 }
 
 .bullet::before{
@@ -168,6 +185,7 @@ h2{
 @media (max-width: 1280px){
   .project{
     display:block;
+    width: 100%;
   }
   .projects{
     width: 100%;
@@ -175,13 +193,14 @@ h2{
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    margin: 1em;
+    margin: 0 1em;
   }
 }
 
 @media (max-width: 870px){
   .resume-col{
     width: 100%;
+    padding: 0 40px 0 40px;
   }
   .resume{
     flex-flow: row wrap;
