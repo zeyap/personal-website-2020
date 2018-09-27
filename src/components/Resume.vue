@@ -116,7 +116,7 @@ export default {
   display: inline-block;
 }
 .resume-col{
-  height: calc(100vh - 110px);
+  height: calc(100vh - 60px);
   overflow: auto;
   padding: 0 40px 0 30px;
   /* width: calc(100px - 20em); */
@@ -219,7 +219,7 @@ h2{
   }
 }
 
-a:focus, a:visited,a:active{
+a, a:focus, a:visited,a:active{
   color:#446594;
 }
 a:hover{
