@@ -34,10 +34,16 @@ var pageExpand = function(){
     })
     pagetitle.style.top="8px";
     pagetitle.style.right="40px";
+    pagetitle.style.transition="top 0.5s, right 0.5s";
+    pagetitle.style["transition-delay"]= "0s, 0.5s";
+
     tweenbuttons.style.opacity = "0";
+    tweenbuttons.style.transition = "opacity 0.5s";
+    tweenbuttons.style['transition-delay'] = "0s";
+
     setTimeout((() => {
         routerwrapper.scrollTo(0,routerwrapper.scrollHeight);
-    }).bind(this), 510);
+    }).bind(this), 500);
     
 }
 
@@ -52,7 +58,12 @@ var pageShrink = function(){
     })
     pagetitle.style.top="25px";
     pagetitle.style.right="160px";
+    pagetitle.style.transition="top 0.5s, right 0.5s";
+    pagetitle.style["transition-delay"]= "0.5s, 0s";
+
     tweenbuttons.style.opacity = "1";
+    tweenbuttons.style.transition = "opacity 0.5s";
+    tweenbuttons.style['transition-delay'] = "0.5s";
 }
 
 var clearRouterviewComponent = function(){

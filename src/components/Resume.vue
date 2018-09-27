@@ -130,7 +130,6 @@ export default {
   height: calc(100vh - 60px);
   overflow: auto;
   padding: 0 40px 0 30px;
-  /* width: calc(100px - 20em); */
   transition: all 0.5s;
 }
 

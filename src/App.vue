@@ -101,7 +101,6 @@ export default {
   right: 160px;
   font-size: 28px;
   font-weight: bolder;
-  transition: all 0.5s;
 }
 
 .router-wrapper{
@@ -111,7 +110,6 @@ export default {
   width: calc(100vw);
   height: calc(100vh - 60px);
   overflow: auto;
-  
   transition: all 0.5s;
 }
 
@@ -124,7 +122,7 @@ export default {
 }
 
 .tweenbuttons{
-  transition: all 0.2s;
+  
 }
 @media (max-width: 870px){
   .fab{
