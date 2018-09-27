@@ -86,7 +86,7 @@ export default {
 
 .page-banner{
   width: calc(100vw - 200px);
-  height: 80px;
+  height: 60px;
   position: absolute;
   top: 0;
   left: 0;

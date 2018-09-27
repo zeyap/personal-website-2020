@@ -2,6 +2,12 @@
 <template>
   <div class="resume" ref="resume">
     <div class="resume-col" ref="resume-col-l">
+      <div class="footer">
+        <h1 class="h1-left" >CONTACT</h1>
+      <div style="margin-top:0.2em;"><v-icon name="envelope"/> zp82 @ cornell.edu </div>
+      <div><span><v-icon name="brands/github"/> github.com/zeyap</a></span></div>
+      </div>
+
       <div v-for="(edu,key) in education" v-bind:key="'edu'+key" class="edu">
         <h1 class="h1-left" v-if="key==0">EDUCATION</h1>
         <h2>{{edu.name}}</h2>
@@ -48,9 +54,14 @@
 <script>
 import resume from '../assets/resume.json'
 import {addScrollListener,clearRouterviewComponent} from '../util.js'
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon'
 
 export default {
   name: 'Resume',
+  components:{
+    'v-icon':Icon
+  },
   data () {
     return {
       skills: resume.skills,
@@ -61,7 +72,7 @@ export default {
     }
   },
   mounted(){
-    [this.$refs['resume-col-l'],this.$refs['resume-col-r']].forEach((target,id)=>{
+    [this.$refs['resume-col-r']].forEach((target,id)=>{//this.$refs['resume-col-l'],
       addScrollListener.bind(this)(target,id);
     })
 
@@ -126,8 +137,9 @@ export default {
 h1{
   font-size: 1.2em;
   margin-bottom: 0;
-  margin-top:0.5em;
+  margin-top:1.2em;
   width: 100%;
+  font-weight: bold;
 }
 
 .h1-left{
@@ -205,8 +217,19 @@ h2{
   .resume{
     flex-flow: row wrap;
   }
-
+  .footer{
+    display: block;
+    width: 100%;
+    margin-bottom: 0.2em;
+    color:white;
+  }
 }
+@media (min-width: 870px){
+  .footer{
+    display: none;
+  }
+}
+
 
 @media (min-width: 1280px) {
   .projects{

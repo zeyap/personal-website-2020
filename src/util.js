@@ -35,6 +35,10 @@ var pageExpand = function(){
     pagetitle.style.top="8px";
     pagetitle.style.right="40px";
     tweenbuttons.style.opacity = "0";
+    setTimeout((() => {
+        routerwrapper.scrollTo(0,routerwrapper.scrollHeight);
+    }).bind(this), 510);
+    
 }
 
 var pageShrink = function(){
