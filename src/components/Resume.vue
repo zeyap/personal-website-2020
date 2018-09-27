@@ -95,7 +95,6 @@ export default {
   align-items:flex-start;
   opacity: 0;
   transition: opacity 0.5s;
-  background: #fafafa;
 }
 
 .resume-col:first-of-type{
@@ -105,23 +104,23 @@ export default {
   flex-flow: row wrap;
   overflow: auto;
   padding: 0 20px 0 40px;
-  background: #94618e;
+  background: #e26181;
   color: white;
 }
 .resume-col:first-of-type::-webkit-scrollbar{
   width: 0.5em;
-  background-color:#e9dbe7;
+  background-color:#e58ea3;
 }
 .resume-col:first-of-type::-webkit-scrollbar-thumb{
-  background-color:#ccb0c8;
+  background-color:#f2c9d2;
 }
 
 .resume-col::-webkit-scrollbar{
   width: 0.5em;
-  background-color: #fff5eb;
+  background-color: white;
 }
 .resume-col::-webkit-scrollbar-thumb{
-  background-color: #f4decb;
+  background-color: #cccccc;
 }
 
 .skill-item{
@@ -143,10 +142,10 @@ h1{
 }
 
 .h1-left{
-  color: #ffd2aa;
+  color: #f2c9d2;
 }
 .h1-right{
-  color: #ffd2aa;
+  color: #aaaaaa;
 }
 h2{
   font-size: 1.5em;
@@ -157,7 +156,7 @@ h2{
   font-size: 1.2em;
 }
 .font-dark{
-  color:#49274a;
+  color:#446594;
 }
 
 .em{
@@ -166,15 +165,15 @@ h2{
 }
 
 .tag{
-  border-bottom: solid 1px #f4decb;
-  color: #f4decb;
+  border-bottom: solid 1px #f2c9d2;
+  color: #f2c9d2;
   display: inline-block;
   
   margin: 0.2em;
 }
 .tag-dark{
-  border: solid 1px #94618e;
-  color:#94618e;
+  border: solid 1px #e58ea3;
+  color:#e58ea3;
   padding: 0 0.2em;
 }
 .exp{
@@ -186,7 +185,6 @@ h2{
   margin: 1em 1em 1em 0;
   border: solid 1px #dddddd;
   box-shadow: 2px 4px 5px #eeeeee;
-  background: white;
 }
 
 .bullet::before{
@@ -243,14 +241,11 @@ h2{
   }
 }
 
-a:focus, a:visited,a:active{
-  color:#49274a;
-}
-a{
-  color: inherit;
+a, a:focus, a:visited,a:active{
+  color:#446594;
 }
 a:hover{
-  color:#ffcb6b
+  color:#e26181
 }
 
 </style>

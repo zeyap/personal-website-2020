@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <div class="page-banner" v-on:mouseover="onMouseoverFab"></div>
-    <FAB class="fab" name="info" style="z-index:4" type="fade-through" border="true" color="#ffcb6b" v-bind:position="fabPos">
+    <FAB class="fab" name="info" style="z-index:4" type="fade-through" border="true" color="#e26181" v-bind:position="fabPos">
       <div><v-icon name="envelope"/> zp82 @ cornell.edu </div>
-      <div><span><v-icon name="brands/github"/> github.com/zeyap</span></div>
+      <div><span><v-icon name="brands/github"/> <a style="color:#e26181" href="github.com/zeyap">github.com/zeyap</a></span></div>
       <div style="height: 0.6em">&nbsp</div>
     </FAB>
     <div class="page-title">{{pageTitle}}</div>
@@ -33,7 +33,7 @@ export default {
   },
   data(){
     return {
-      colors:['#ffffff','#f4decb','#94618e'],//#e3c0c0
+      colors:['#ffffff','#e26181','#446594'],//#e3c0c0
       urls:["/","/project/","/contact/"],
       pageTitle: 'ZEYA PENG',
       mouseoverQueue: [],
@@ -79,7 +79,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 18px;
-  color: black;
+  color: #444444;
 
   /* text-align:justify; */
 }
@@ -94,7 +94,7 @@ export default {
 }
 
 .page-title{
-  color: #c7c7c7;
+  color: #cccccc;
   z-index: 2;
   position: absolute;
   top: 25px;
@@ -115,10 +115,10 @@ export default {
 
 .router-wrapper::-webkit-scrollbar{
   width: 0.5em;
-  background-color: #e9dbe7;
+  background-color: white;
 }
 .router-wrapper::-webkit-scrollbar-thumb{
-  background-color: #ccb0c8;
+  background-color: #cccccc;
 }
 
 .tweenbuttons{
