@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <!-- <div class="page-banner" v-on:mouseover="onMouseoverFab"></div> -->
-    <a target="_blank" href="https://github.com/zeyap/zeyap.github.io/tree/dev/src/assets/resume_zeyapeng_dev.pdf"><FAB class="fab" name="paperclip" name_after="arrow-down" style="z-index:4" type="fade-through" border="true" color="#ffa389" v-bind:position="fabPos">
+    <a target="_blank" href="https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/resume_zeyapeng_dev.pdf"><FAB class="fab" name="paperclip" name_after="arrow-down" style="z-index:4" type="fade-through" border="true" color="#ffa389" v-bind:position="fabPos">
     </FAB></a>
     <div class="page-title" ref="page-title">{{pageTitle}}</div>
 
-    <TweenWrapper class="tweenbuttons" border="true" radius="20px" v-bind:color="colors" button_number="3" style="z-index:0" v-bind:position="{top:'40px',right:'40px'}"
+    <TweenWrapper class="tweenbuttons" ref="tween" border="true" radius="20px" v-bind:color="colors" button_number="3" v-bind:position="{top:'40px',right:'40px'}"
     v-bind:urls="urls" v-bind:on_mouseover_fns="onMouseover">
     </TweenWrapper>
 
@@ -69,6 +69,7 @@ export default {
     this.$refs['page-title'].style.color = '#a2dae8';
     this.$refs['page-title'].style.border = 'solid 1px #a2dae8';
     this.$refs['page-title'].style['box-shadow']='2px 2px #a2dae8';
+
   }
 }
 </script>

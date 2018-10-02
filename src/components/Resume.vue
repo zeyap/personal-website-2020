@@ -173,12 +173,12 @@ export default {
 .plus:hover .tag{
   opacity: 1;
   transition: opacity 0.5s;
-  transition-delay: 1s;
+  transition-delay: 0.3s;
 }
 .plus .tag{
   opacity: 0;
   transition: opacity 0.5s;
-  transition-delay: 1s;
+  transition-delay: 0.3s;
 }
 .enumerates{
   overflow: hidden;

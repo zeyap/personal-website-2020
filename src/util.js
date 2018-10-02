@@ -40,8 +40,9 @@ var pageExpand = function(){
     tweenbuttons.style.opacity = "0";
     tweenbuttons.style.transition = "opacity 0.5s";
     tweenbuttons.style['transition-delay'] = "0s";
+    // tweenbuttons.style['pointer-event']='none';
     // tweenbuttons.style['z-index']='0';
-    resumecol[1].style['pointer-event']='none';
+    
 
     if(window.matchMedia("(max-aspect-ratio: 1/1)").matches){
         console.log('portrait')
@@ -72,7 +73,7 @@ var pageShrink = function(){
     tweenbuttons.style.transition = "opacity 0.5s";
     tweenbuttons.style['transition-delay'] = "0.5s";
     // tweenbuttons.style['z-index']='3';
-    resumecol[1].style['pointer-event']='auto';
+    // resumecol[1].style['pointer-event']='auto';
 
 }
 
