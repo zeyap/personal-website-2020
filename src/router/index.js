@@ -6,27 +6,41 @@ import Projects from '@/components/Projects'
 
 Vue.use(Router)
 
+const titlePrefix = "Zeya Peng | "
+
 export default new Router({
   routes: [
     {
       path: '/',
       name: 'Resume',
-      component: Resume
+      component: Resume,
+      meta: {
+          title: titlePrefix + 'Resume'
+      }
     },
     {
       path: '/resume',
       name: 'Resume',
-      component: Resume
+      component: Resume,
+      meta: {
+          title: titlePrefix + 'Resume'
+      }
     },
     {
       path: '/contact',
       name: 'Contact',
-      component: Contact
+      component: Contact,
+      meta: {
+          title: titlePrefix + 'Contact'
+      }
     },
     {
       path: '/project',
       name: 'Projects',
-      component: Projects
+      component: Projects,
+      meta: {
+          title: titlePrefix + 'Projects'
+      }
     }
   ]
 })

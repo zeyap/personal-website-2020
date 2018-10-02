@@ -1,12 +1,9 @@
 <template>
   <div id="app">
-    <div class="page-banner" v-on:mouseover="onMouseoverFab"></div>
-    <FAB class="fab" name="info" style="z-index:4" type="fade-through" border="true" color="#e26181" v-bind:position="fabPos">
-      <div><v-icon name="envelope"/> zp82 @ cornell.edu </div>
-      <div><span><v-icon name="brands/github"/> <a style="color:#e26181" href="github.com/zeyap">github.com/zeyap</a></span></div>
-      <div style="height: 0.6em">&nbsp</div>
-    </FAB>
-    <div class="page-title">{{pageTitle}}</div>
+    <!-- <div class="page-banner" v-on:mouseover="onMouseoverFab"></div> -->
+    <a target="_blank" href="https://github.com/zeyap/zeyap.github.io/tree/dev/src/assets/resume_zeyapeng_dev.pdf"><FAB class="fab" name="paperclip" name_after="arrow-down" style="z-index:4" type="fade-through" border="true" color="#ffa389" v-bind:position="fabPos">
+    </FAB></a>
+    <div class="page-title" ref="page-title">{{pageTitle}}</div>
 
     <TweenWrapper class="tweenbuttons" border="true" radius="20px" v-bind:color="colors" button_number="3" style="z-index:0" v-bind:position="{top:'40px',right:'40px'}"
     v-bind:urls="urls" v-bind:on_mouseover_fns="onMouseover">
@@ -33,7 +30,7 @@ export default {
   },
   data(){
     return {
-      colors:['#ffffff','#e26181','#446594'],//#e3c0c0
+      colors:['#ffffff','#ffede8','#a2dae8'],//#e3c0c0
       urls:["/","/project/","/contact/"],
       pageTitle: 'ZEYA PENG',
       mouseoverQueue: [],
@@ -59,7 +56,7 @@ export default {
         }).bind(this),2000));
       },
       lastScrollTop: [],
-      fabPos: {left:'40px',top:'10px'}
+      fabPos: {right:'40px',bottom:'10px'}
     }
   },
   methods:{
@@ -69,6 +66,9 @@ export default {
   },
   mounted(){
     // addScrollListener.bind(this)(this.$refs.routerview,0);
+    this.$refs['page-title'].style.color = '#a2dae8';
+    this.$refs['page-title'].style.border = 'solid 1px #a2dae8';
+    this.$refs['page-title'].style['box-shadow']='2px 2px #a2dae8';
   }
 }
 </script>
@@ -79,7 +79,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 18px;
-  color: #444444;
+  color: #353535;
+  /* background: #e7f6fa; */
 
   /* text-align:justify; */
 }
@@ -94,23 +95,25 @@ export default {
 }
 
 .page-title{
-  color: #cccccc;
+  
   z-index: 2;
   position: absolute;
   top: 25px;
   right: 160px;
   font-size: 28px;
-  font-weight: bolder;
+  background: white;
+  padding: 0 0.3em;
+  /* font-weight: bolder; */
 }
 
 .router-wrapper{
-  margin: 60px 0 0 0;
+  margin: 0 0 0 0;
   position: absolute;
   top: 0px;
-  width: calc(100vw);
-  height: calc(100vh - 60px);
+  width: 100vw;
+  height: 100vh;
   overflow: auto;
-  transition: all 0.5s;
+  /* transition: all 0.5s; */
 }
 
 .router-wrapper::-webkit-scrollbar{
@@ -118,7 +121,7 @@ export default {
   background-color: white;
 }
 .router-wrapper::-webkit-scrollbar-thumb{
-  background-color: #cccccc;
+  background-color: #dadada;
 }
 
 .tweenbuttons{
