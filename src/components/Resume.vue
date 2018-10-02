@@ -235,15 +235,7 @@ h2{
   font-size: 1.2em;
 }
 .h2-large{
-  color: white;
-    -webkit-text-stroke: 1px white;
-   text-shadow:
-       2px 2px 0 #ffa389,
-     -1px -1px 0 #ffa389,  
-      1px -1px 0 #ffa389,
-      -1px 1px 0 #ffa389,
-       1px 1px 0 #ffa389;
-  
+  color: #ffa389
 }
 .font-dark{
   color:#5a5a5a;
