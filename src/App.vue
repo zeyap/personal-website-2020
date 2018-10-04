@@ -30,7 +30,7 @@ export default {
   },
   data(){
     return {
-      colors:['#ffffff','#ffede8','#a2dae8'],//#e3c0c0
+      colors:['#a2dae8','#ffffff','#ffede8'],//#e3c0c0
       urls:["/","/project/","/contact/"],
       pageTitle: 'ZEYA PENG',
       mouseoverQueue: [],
@@ -62,14 +62,24 @@ export default {
   methods:{
     onMouseoverFab: function(){
       pageShrink();
+    },
+    analytics: function(){
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-110465258-1', 'auto');
+        ga('send', 'pageview');
     }
   },
   mounted(){
-    // addScrollListener.bind(this)(this.$refs.routerview,0);
     this.$refs['page-title'].style.color = '#a2dae8';
     this.$refs['page-title'].style.border = 'solid 1px #a2dae8';
     this.$refs['page-title'].style['box-shadow']='2px 2px #a2dae8';
-
+    // window.document.querySelector('#app').style.background="#a2dae8";
+    this.analytics()
   }
 }
 </script>
@@ -81,7 +91,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   font-size: 18px;
   color: #353535;
-  /* background: #e7f6fa; */
+  /* background: #a2dae8; */
 
   /* text-align:justify; */
 }
@@ -118,23 +128,23 @@ export default {
 }
 
 .router-wrapper::-webkit-scrollbar{
-  width: 0.5em;
+  width: 0em;
   background-color: white;
 }
 .router-wrapper::-webkit-scrollbar-thumb{
-  background-color: #dadada;
+  background-color: white;
 }
 
 .tweenbuttons{
   
 }
-@media (max-width: 870px){
+@media (max-aspect-ratio: 1/1){
   .fab{
     opacity: 0;
     transition: 0.5s;
   }
 }
-@media (min-width: 870px){
+@media (min-aspect-ratio: 1/1){
   .fab{
     opacity: 1;
     transition: 0.5s;

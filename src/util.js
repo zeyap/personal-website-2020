@@ -45,10 +45,8 @@ var pageExpand = function(){
     
 
     if(window.matchMedia("(max-aspect-ratio: 1/1)").matches){
-        console.log('portrait')
-        setTimeout((() => {
-            routerwrapper.scrollTo(0,routerwrapper.scrollHeight);
-        }).bind(this), 500);
+        // console.log('portrait')
+        routerwrapper.scrollTo({top:routerwrapper.scrollHeight,behavior: "smooth"});
     }
     
     
