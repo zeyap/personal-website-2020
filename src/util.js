@@ -44,8 +44,15 @@ var pageExpand = function(){
     // tweenbuttons.style['z-index']='0';
     
 
-    if(window.matchMedia("(max-aspect-ratio: 1/1)").matches){
+    if(window.matchMedia("(max-aspect-ratio: 1/1)").matches && window.title==="resume"){
         // console.log('portrait')
+        // let i = routerwrapper.scrollY;
+        // if (i < routerwrapper.scrollHeight) {
+        //     setTimeout(() => {
+        //         routerwrapper.scrollTo({top:i,behavior:'smooth'});
+        //         i+=10;
+        //     }, 10);
+        // }
         routerwrapper.scrollTo({top:routerwrapper.scrollHeight,behavior: "smooth"});
     }
     

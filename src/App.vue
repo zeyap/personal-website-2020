@@ -19,14 +19,12 @@
 <script>
 import {TweenWrapper,FAB} from '../../vue-material/src/index.js'
 import {addScrollListener, pageShrink, clearRouterviewComponent} from './util.js'
-import 'vue-awesome/icons'
-import Icon from 'vue-awesome/components/Icon'
+
 export default {
   name: 'App',
   components:{
     TweenWrapper,
-    FAB,
-    'v-icon':Icon
+    FAB
   },
   data(){
     return {
@@ -78,6 +76,7 @@ export default {
     this.$refs['page-title'].style.color = '#a2dae8';
     this.$refs['page-title'].style.border = 'solid 1px #a2dae8';
     this.$refs['page-title'].style['box-shadow']='2px 2px #a2dae8';
+    addScrollListener.bind(this)(this.$refs.routerview,2);
     // window.document.querySelector('#app').style.background="#a2dae8";
     this.analytics()
   }

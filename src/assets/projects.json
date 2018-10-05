@@ -2,43 +2,59 @@
     {
         "name":"Personal Website 1.0",
         "date":"09/2018 - Present",
-        "link":"https://github.com/zeyap/zeyap.github.io/tree/dev",
+        "github":"https://github.com/zeyap/zeyap.github.io/tree/dev",
+        "img":"https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/images/personal.png",
+        "link":"zeyap.xyz",
         "tags":["Vue","CSS"],
         "bullets":["Created Personal Website Template by Vue.js and Pure CSS, also using the Vue 2.5 material design button library I am building.",
         "Link: zeyap.xyz"]
-    },
-    {
-        "name":"Vue Library for Material Design Button",
-        "date":"09/2018 - Present",
-        "link":"https://github.com/zeyap/vue-material-motion",
-        "tags":["Open Source","Vue","CSS"],
-        "bullets":["Created Button component with Material Design Motion (Tweening, Fading, Shared Transformation, etc.) on Vue 2.5."]
     },{
         "name":"SecurityCentral - Red Hat",
         "date":"08/2018 - Present",
         "link":"https://github.com/SecurityCentral/ui-mockup",
+        "github":"https://github.com/SecurityCentral/ui-mockup",
+        "img":"https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/images/securitycentral.png",
         "tags":["MPS Capstone","Web","React"],
         "bullets":["Designed UX and implemented web front-end of RedHat's Open Source web project using Patternfly Framework and ReactJS, which guides users to fill out security reports and help security officers to track supervision work.",
         "Collaborated with back-end to build input validation and comment system."]
     },{
         "name":"NewsViz",
         "date":"07/2018 - Present",
-        "link":"https://github.com/zeyap/news_viz",
+        "github":"https://github.com/zeyap/news_viz",
         "tags":["Web","Python","Django","ElasticSearch","React Native"],
         "bullets":["Developed back-end of a meme-sourcing mobile Web App to pull out and cluster headline articles from Internet, using Django and ElasticSearch; analyzed language to detect changes on wordings and tones.","Collaborated with product designer to create front-end with React Native."]
+    }
+],
+"other":[
+    {
+        "name":"Vue Library for Material Design Button",
+        "date":"09/2018 - Present",
+        "github":"https://github.com/zeyap/vue-material-motion",
+        "tags":["Open Source","Vue","CSS"],
+        "bullets":["Button component made with Material Design Motion (Tweening, Fading, Shared Transformation, etc.) on Vue 2.5."]
+    },{
+        "name":"GlobalGameJam '18",
+        "date":"02/2018",
+        "github":"https://github.com/zeyap/DatingStart",
+        "link":"https://globalgamejam.org/2018/games/dating-starts",
+        "tags":["Unity3D","ShaderLab"],
+        "bullets":["A dating simulation game on PC. Made in GGJ Hackathon. Acted as lead programmer."]
     },{
         "name":"Music Fingerprint",
         "date":"11/2017 - 01/2018",
-        "link":"https://github.com/zeyap/MusicFingerprint",
+        "github":"https://github.com/zeyap/MusicFingerprint",
         "tags":["Multimedia Processing","C++"],
         "bullets":["Implemented algorithm of music feature extraction and search, and application UI in C++ with Qt Creator."]
     },{
         "name":"MiniSQL",
         "date":"04/2017 - 07/2017",
-        "link":"",
         "tags":["Database","C++"],
-        "bullets":["Led in a team of four to construct relational database management system (RDBMS) using C++.",
-            "Implemented simplified SQL standard, supporting syntax interpreter, storage buffer and index operations by B+ tree."]
+        "bullets":["Constructed relational database management system (RDBMS) using C++. ",
+            "With simplified SQL standard, supporting syntax interpreter, storage buffer and index operations by B+ tree."]
+    },{
+        "name":"+ MORE PROJECTS",
+        "tags":["C++","Computer Vision", "Computer Graphics"],
+        "github":"https://github.com/zeyap",
+        "bullets":["See my Github :D"]
     }
-
 ]}

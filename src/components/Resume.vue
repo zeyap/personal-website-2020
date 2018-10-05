@@ -57,7 +57,6 @@
       </div>
       
       <div style="height: 1em">&nbsp</div>
-
       </div>
     
   </div>
@@ -66,13 +65,10 @@
 <script>
 import resume from '../assets/resume.json'
 import {addScrollListener,clearRouterviewComponent} from '../util.js'
-import 'vue-awesome/icons'
-import Icon from 'vue-awesome/components/Icon'
 
 export default {
   name: 'Resume',
   components:{
-    'v-icon':Icon
   },
   data () {
     return {
@@ -91,6 +87,7 @@ export default {
     setTimeout((function(){
       this.$refs.resume.style.opacity = 1;
     }).bind(this),200)
+    window.title = "resume";
   },
   beforeDestroy(){
     clearRouterviewComponent();
