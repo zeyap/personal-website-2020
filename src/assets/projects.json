@@ -18,11 +18,14 @@
         "bullets":["Designed UX and implemented web front-end of RedHat's Open Source web project using Patternfly Framework and ReactJS, which guides users to fill out security reports and help security officers to track supervision work.",
         "Collaborated with back-end to build input validation and comment system."]
     },{
-        "name":"NewsViz",
-        "date":"07/2018 - Present",
-        "github":"https://github.com/zeyap/news_viz",
-        "tags":["Web","Python","Django","ElasticSearch","React Native"],
-        "bullets":["Developed back-end of a meme-sourcing mobile Web App to pull out and cluster headline articles from Internet, using Django and ElasticSearch; analyzed language to detect changes on wordings and tones.","Collaborated with product designer to create front-end with React Native."]
+        "name":"Cubicle: A Visuospatial Training Game",
+        "date":"07/2017 - 09/2017",
+        "img":"https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/images/cubicles.png",
+        "link":"http://cascade.cs.illinois.edu/cubicle.html",
+        "github":"https://github.com/ShiliangZuo/Cubicle",
+        "publication":"https://dl.acm.org/citation.cfm?id=3172954",
+        "tags":["Human-Computer Interaction","Unity3D"],
+        "bullets":["Analytic-driven 3D Educational Game built with University of Illinois Urbana-Champaigne researchers. ","Work published on ACM IUI'18 Conference."]
     }
 ],
 "other":[
@@ -32,6 +35,12 @@
         "github":"https://github.com/zeyap/vue-material-motion",
         "tags":["Open Source","Vue","CSS"],
         "bullets":["Button component made with Material Design Motion (Tweening, Fading, Shared Transformation, etc.) on Vue 2.5."]
+    },{
+        "name":"NewsViz",
+        "date":"07/2018 - Present",
+        "github":"https://github.com/zeyap/news_viz",
+        "tags":["Web","Python","Django","ElasticSearch","React Native"],
+        "bullets":["Developed back-end of a meme-sourcing mobile Web App to pull out and cluster headline articles from Internet, using Django and ElasticSearch.","Created front-end with React Native."]
     },{
         "name":"GlobalGameJam '18",
         "date":"02/2018",
@@ -49,8 +58,8 @@
         "name":"MiniSQL",
         "date":"04/2017 - 07/2017",
         "tags":["Database","C++"],
-        "bullets":["Constructed relational database management system (RDBMS) using C++. ",
-            "With simplified SQL standard, supporting syntax interpreter, storage buffer and index operations by B+ tree."]
+        "bullets":["Constructed relational database management system (RDBMS) ",
+            "with simplified SQL standard, supporting syntax interpreter, storage buffer and index operations by B+ tree."]
     },{
         "name":"+ MORE PROJECTS",
         "tags":["C++","Computer Vision", "Computer Graphics"],
