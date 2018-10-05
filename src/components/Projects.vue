@@ -2,6 +2,7 @@
 <template>
   <div class="projects" ref="projects">
     <div class="headmargin">&nbsp</div>
+    <div class="headmargin">&nbsp</div>
 
     <div v-for="(project,key) in projects" v-bind:key="'project-card'+key" class="project">
       <div v-if="key%2===0">
@@ -44,7 +45,7 @@
       </div>
     </div>
 
-    <div class="projects-other">
+    <div class="projects-other" ref="projects-other">
     <div class="project projects-other-inner" style="height: auto">
       <div v-for="(project,key) in other"  v-bind:key="'otherproject'+key" class="project-other">
         <div>
@@ -76,11 +77,15 @@ export default {
     }
   },
   mounted(){
-      
+     
     setTimeout((function(){
       this.$refs.projects.style.opacity = 1;
     }).bind(this),200);
     window.title = "projects"
+     document.querySelector("body").style.background = "#ffffff"
+  },
+  created(){
+    
   },
   beforeDestroy(){
     this.$refs['projects'].style.opacity = "0";
@@ -96,6 +101,7 @@ export default {
   opacity:0;
   transition: opacity 1s;
   overflow: auto;
+  /* background: white; */
 }
 
 </style>

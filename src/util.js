@@ -45,16 +45,19 @@ var pageExpand = function(){
     
 
     if(window.matchMedia("(max-aspect-ratio: 1/1)").matches && window.title==="resume"){
-        // console.log('portrait')
-        // let i = routerwrapper.scrollY;
-        // if (i < routerwrapper.scrollHeight) {
-        //     setTimeout(() => {
-        //         routerwrapper.scrollTo({top:i,behavior:'smooth'});
-        //         i+=10;
-        //     }, 10);
-        // }
         routerwrapper.scrollTo({top:routerwrapper.scrollHeight,behavior: "smooth"});
     }
+    
+    // if(window.projectsOther){
+    //     projectsOther.style.setProperty('display', '');
+    //     console.log(projectsOther.getBoundingClientRect())
+    //     if(projectsOther.style.opacity == 0){
+    //         projectsOther.style.opacity = 1;
+    //         projectsOther.style.transition = "opacity 1s";
+    //     }
+    // }else{
+    //     window.projectsOther = document.querySelector('.projects-other');
+    // }
     
     
 }

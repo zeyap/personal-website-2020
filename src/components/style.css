@@ -265,16 +265,16 @@
     padding-bottom: 2em;
   }
   .project-other:hover .project-other-brief{
-    height: 150px;
+    height: auto;
     opacity: 1;
-    /* display: block; */
+    display: block;
     transition: height 0.5s, opacity 0.5s;
 
   }
   .project-other-brief{
     height: 0;
     opacity: 0;
-    /* display: none; */
+    display: none;
     transition: height 0.5s, opacity 0.5s;
   }
   
@@ -473,3 +473,98 @@
     }
   }
 
+  
+  @media (min-aspect-ratio: 1/1){
+    .about{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+    .about-left{
+      width: 30vw;
+      height: 100vh;
+      
+      display: flex;
+      flex-flow: col nowrap;
+      justify-content: center;
+      align-items: center;
+      background: #ffe9e2;
+    }
+    .about-right{
+      width: 70vw;
+      height: 100vh;
+      /* background: #ffe5de; */
+      display: flex;
+      flex-flow: col nowrap;
+      justify-content: center;
+      align-items: center;
+      text-align: flex-start;
+      background: white;
+      z-index:0;
+      padding: 0 2em;
+  
+    }
+  }
+
+  @media (max-aspect-ratio: 1/1){
+    .about{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+    .about-left{
+      /* width: 30vw; */
+      width: 100vw;
+      height: 30vh;
+      
+      display: flex;
+      flex-flow: col nowrap;
+      justify-content: center;
+      align-items: center;
+      background: #ffe9e2;
+      
+    }
+    .about-right{
+      width: 100vw;
+      height: 70vh;
+      overflow: auto;
+      /* background: #ffe5de; */
+      display: flex;
+      flex-flow: col nowrap;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: flex-start;
+      background: white;
+      z-index:0;
+      padding: 0 2em;
+  
+    }
+  }
+  
+
+  .about-intro{
+    /* font-size: 1.5em; */
+  }
+
+  .h2-underline{
+    font-size: 1.5em;
+    text-decoration: #a2dae8 solid underline;
+  }
+
+  .about-q:hover{
+    color: #a2dae8
+  }
+
+  .about-q:hover:before{
+    content:"+ "
+  }
+
+  .about-q:hover .about-info{
+    opacity: 0;
+  }

@@ -3,7 +3,7 @@
     <!-- <div class="page-banner" v-on:mouseover="onMouseoverFab"></div> -->
     <a target="_blank" href="https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/resume_zeyapeng_dev.pdf"><FAB class="fab" name="paperclip" name_after="arrow-down" style="z-index:4" type="fade-through" border="true" color="#ffa389" v-bind:position="fabPos">
     </FAB></a>
-    <div class="page-title" ref="page-title">{{pageTitle}}</div>
+    <div class="page-title" ref="page-title" v-on:mouseover="shownav">{{pageTitle}}</div>
 
     <TweenWrapper class="tweenbuttons" ref="tween" border="true" radius="20px" v-bind:color="colors" button_number="3" v-bind:position="{top:'40px',right:'40px'}"
     v-bind:urls="urls" v-bind:on_mouseover_fns="onMouseover">
@@ -18,7 +18,7 @@
 
 <script>
 import {TweenWrapper,FAB} from '../../vue-material/src/index.js'
-import {addScrollListener, pageShrink, clearRouterviewComponent} from './util.js'
+import {addScrollListener, pageShrink, pageExpand, clearRouterviewComponent} from './util.js'
 
 export default {
   name: 'App',
@@ -29,7 +29,7 @@ export default {
   data(){
     return {
       colors:['#a2dae8','#ffffff','#ffede8'],//#e3c0c0
-      urls:["/","/project/","/contact/"],
+      urls:["/","/project/","/about/"],
       pageTitle: 'ZEYA PENG',
       mouseoverQueue: [],
       onMouseover:[(function(){
@@ -41,7 +41,7 @@ export default {
         this.recoverName();
       }).bind(this),
       (function(){
-        this.pageTitle='CONTACT';
+        this.pageTitle='ABOUT';
         this.recoverName();
       }).bind(this)],
       recoverName:function(){
@@ -70,6 +70,9 @@ export default {
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
         ga('create', 'UA-110465258-1', 'auto');
         ga('send', 'pageview');
+    },
+    shownav: function(){
+      pageShrink();
     }
   },
   mounted(){

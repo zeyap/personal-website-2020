@@ -79,7 +79,7 @@ export default {
     }
   },
   mounted(){
-    
+    // document.querySelector(".body").style.background = "#a2dae8";
     [this.$refs['resume-col-r']].forEach((target,id)=>{//this.$refs['resume-col-l'],
       addScrollListener.bind(this)(target,id);
     })
