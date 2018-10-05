@@ -29,7 +29,7 @@ export default {
   data(){
     return {
       colors:['#a2dae8','#ffffff','#ffede8'],//#e3c0c0
-      urls:["/","/project/","/about/"],
+      urls:["/resume/","/project/","/about/"],
       pageTitle: 'ZEYA PENG',
       mouseoverQueue: [],
       onMouseover:[(function(){
