@@ -13,7 +13,7 @@
     </div>
     </div>
    <div class="about-right">
-     <div class="about-intro" ref="about-intro">
+     <div class="about-intro">
         <span class="h2-underline"><h2> Hi, I am Zeya Peng </h2></span>
         <div style="1em">&nbsp</div>
         <div>Currently a master student on Information Science at Cornell University.</div>
@@ -22,7 +22,7 @@
         <div>I mind scalability and performance behind the scene. </div>
         <div style="1em">&nbsp</div>
         <div v-for="(question, key) in questions" v-bind:key="'q'+key">
-        <a v-bind:href="question.url"><h2 class="about-q">{{question.q}}</h2></a>
+        <a v-bind:href="question.url" ref="about-q"><h2 class="about-q">{{question.q}}</h2></a>
         <!-- <div class="about-info" v-for="(item, i) in question.info" v-bind:key="'qinfo-'+i">{{item}}</div> -->
         </div>
       </div>
@@ -54,20 +54,26 @@ export default {
     this.$refs.cubeani.style.animation="rot 8s linear infinite";
 
     let that = this;
-    this.$refs['about-intro'].onmousemove = function(e) { 
-      var x = e.pageX - this.offsetLeft; 
-      var y = e.pageY - this.offsetTop; 0
-      if(y>300){
-        // console.log('true y',y)
-        that.$refs.cubeani.style.animation="rotX-rev 8s linear infinite";
-      }else if(y>250){
-        // console.log('true y',y)
-        that.$refs.cubeani.style.animation="rotY 8s linear infinite";
-      }else if(y>200){
-        // console.log('true y',y)
-        that.$refs.cubeani.style.animation="rotX 8s linear infinite";
-      }else{ }
-    }
+    this.$refs['about-q'].forEach((item,id)=>{
+      switch(id){
+        case 0:
+        item.onmouseover = function(e){
+          that.$refs.cubeani.style.animation="rotX-rev 8s linear infinite";
+        }
+        break;
+        case 1:
+        item.onmouseover = function(e){
+          that.$refs.cubeani.style.animation="rotY 8s linear infinite";
+        }
+        break;
+        default:
+        item.onmouseover = function(e){
+          that.$refs.cubeani.style.animation="rotX 8s linear infinite";
+        }
+        break;
+      }
+
+    })
 
     
   },

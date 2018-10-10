@@ -50,6 +50,8 @@
         <span class="bullet" v-for="(item, i) in exp.bullets" v-bind:key="'expbullet'+i">{{item}}</span>
       </div>
 
+      <a href="/#/project/"><h1 class="h1-right">PROJECTS →</h1></a>
+
       <div class="plus objective">
         <div>Looking for Software Engineering & Front-end Internship opportunities</div>
         <div style="margin-top:0.2em;"><v-icon name="envelope"/> zp82 @ cornell.edu </div>
