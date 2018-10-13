@@ -19,7 +19,7 @@
 ],
 "experience":[
     {
-        "name":"Red Hat",
+        "name":"Red Hat, Inc.",
         "date":"08/2018 - 12/2018",
         "location":"Ithaca, NY",
         "project":"SecurityCentral",
@@ -28,7 +28,7 @@
         "bullets":["Implemented web front-end of RedHat's Open Source web project using ReactJS, improved the UX in workflow of users filling out security reports and security officers tracking supervision work.","Collaborated with back-end to build input validation and comment system."]
     },
     {
-        "name":"Harmony Cloud Technology",
+        "name":"Harmony Cloud, Co. Ltd.",
         "date":"05/2018 - 07/2018",
         "location":"Hangzhou, China",
         "project":"Application Performance Monitor(APM) Website",
