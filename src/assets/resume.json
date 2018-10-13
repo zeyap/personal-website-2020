@@ -19,6 +19,15 @@
 ],
 "experience":[
     {
+        "name":"Red Hat",
+        "date":"08/2018 - 12/2018",
+        "location":"Ithaca, NY",
+        "project":"SecurityCentral",
+        "link":"https://github.com/SecurityCentral",
+        "title":"Graduate Software developer & UX Specialist",
+        "bullets":["Implemented web front-end of RedHat's Open Source web project using ReactJS, improved the UX in workflow of users filling out security reports and security officers tracking supervision work.","Collaborated with back-end to build input validation and comment system."]
+    },
+    {
         "name":"Harmony Cloud Technology",
         "date":"05/2018 - 07/2018",
         "location":"Hangzhou, China",
@@ -27,7 +36,7 @@
         "title":"Front-end developer Intern",
         "bullets":["Collaborated with PM and designer to extend core features on APM website front-end, using AngularJS, CSS and visualization library; built REST API with ExpressJS, connecting to MySQL and back-end service.","Refactored front end with ReactJS and LESS (CSS preprocessor) to address performance issues, downsizing UI components code base by over 50 percent; actively participated in code review for building highly reusable components with React."]
     },{
-        "name":"Cascade Lab",
+        "name":"Cascade Lab, UIUC",
         "date":"07/2017 - 09/2017",
         "location":"Urbana, IL",
         "title":"Research Intern",
@@ -35,48 +44,4 @@
         "link":"http://cascade.cs.illinois.edu/cubicle.html",
         "bullets":["Designed and built 2 analytics-driven 3D games using Unity3D in C# to train visuospatial skills; study of 10 participants showing strong correlation between game performance and spatial skills.","Built the API for game map, enabling efficient iteration on game modules."]
     }	
-],
-"projects":[
-    {
-        "name":"Personal Website 1.0",
-        "date":"09/2018 - Present",
-        "link":"https://github.com/zeyap/zeyap.github.io/tree/dev",
-        "tags":["Vue","CSS"],
-        "bullets":["Created Personal Website Template by Vue.js and Pure CSS, also using the Vue 2.5 material design button library I am building.",
-        "Link: zeyap.xyz"]
-    },
-    {
-        "name":"Vue Library for Material Design Button",
-        "date":"09/2018 - Present",
-        "link":"https://github.com/zeyap/vue-material-motion",
-        "tags":["Open Source","Vue","CSS"],
-        "bullets":["Created Button component with Material Design Motion (Tweening, Fading, Shared Transformation, etc.) on Vue 2.5."]
-    },{
-        "name":"SecurityCentral - Red Hat",
-        "date":"08/2018 - Present",
-        "link":"https://github.com/SecurityCentral/ui-mockup",
-        "tags":["MPS Capstone","Web","React"],
-        "bullets":["Designed UX and implemented web front-end of RedHat's Open Source web project using Patternfly Framework and ReactJS, which guides users to fill out security reports and help security officers to track supervision work.",
-        "Collaborated with back-end to build input validation and comment system."]
-    },{
-        "name":"NewsViz",
-        "date":"07/2018 - Present",
-        "link":"https://github.com/zeyap/news_viz",
-        "tags":["Web","Python","Django","ElasticSearch","React Native"],
-        "bullets":["Developed back-end of a meme-sourcing mobile Web App to pull out and cluster headline articles from Internet, using Django and ElasticSearch; analyzed language to detect changes on wordings and tones.","Collaborated with product designer to create front-end with React Native."]
-    },{
-        "name":"Music Fingerprint",
-        "date":"11/2017 - 01/2018",
-        "link":"https://github.com/zeyap/MusicFingerprint",
-        "tags":["Multimedia Processing","C++"],
-        "bullets":["Implemented algorithm of music feature extraction and search, and application UI in C++ with Qt Creator."]
-    },{
-        "name":"MiniSQL",
-        "date":"04/2017 - 07/2017",
-        "link":"",
-        "tags":["Database","C++"],
-        "bullets":["Led in a team of four to construct relational database management system (RDBMS) using C++.",
-            "Implemented simplified SQL standard, supporting syntax interpreter, storage buffer and index operations by B+ tree."]
-    }
-
 ]}

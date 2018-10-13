@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- <div class="page-banner" v-on:mouseover="onMouseoverFab"></div> -->
-    <a target="_blank" href="https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/resume_zeyapeng_dev.pdf"><FAB class="fab" name="paperclip" name_after="arrow-down" style="z-index:4" type="fade-through" border="true" color="#ffa389" v-bind:position="fabPos">
+    <a target="_blank" href="https://zeyap.github.io/static/resume_zeyapeng_dev.pdf"><FAB class="fab" name="paperclip" name_after="arrow-down" style="z-index:4" type="fade-through" border="true" color="#ffa389" v-bind:position="fabPos">
     </FAB></a>
     <div class="page-title" ref="page-title" v-on:mouseover="shownav">{{pageTitle}}</div>
 

@@ -5,9 +5,8 @@
         "link":"https://github.com/SecurityCentral/ui-mockup",
         "github":"https://github.com/SecurityCentral/ui-mockup",
         "img":"https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/images/securitycentral.png",
-        "tags":["MPS Capstone","Web","React"],
-        "bullets":["Designed UX and implemented web front-end of RedHat's Open Source web project using Patternfly Framework and ReactJS, which guides users to fill out security reports and help security officers to track supervision work.",
-        "Collaborated with back-end to build input validation and comment system."]
+        "tags":["Graduate Capstone","Web","React"],
+        "bullets":["An Open Source web project, aims to improve the workflow experience of security workers in government."]
     },{
         "name":"Personal Website 1.0",
         "date":"09/2018 - Present",
