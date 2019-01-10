@@ -33,7 +33,7 @@
           <span v-for="(item, i) in project.bullets" v-bind:key="'projbullet'+i">{{item}}</span>
           </div>
           <span class="project-links"><a class="shadowed" v-if="project.github" target="_blank" v-bind:href="project.github"><v-icon name="brands/github"/></a>
-            <a class="shadowed" v-if="project.link" target="_blank" v-bind:href="project.link[1]"><v-icon name="external-link-alt"/> Try it</a></span>
+            <a class="shadowed" v-if="project.link" target="_blank" v-bind:href="project.link[1]"><v-icon name="external-link-alt"/> {{project.link[0]}}</a></span>
         </div>
         
         
