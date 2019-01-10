@@ -18,7 +18,7 @@
         <div>{{edu.date}}</div>
         <div>{{edu.location}}</div>
         <div class="em">{{edu.degree}}</div>
-        <div class="plus"><B>+ Related courses</B>
+        <div class="plus"><B>Related courses</B>
           <div class="enumerates">
         <div class="tag" v-for="(course, i) in edu.courses" v-bind:key="'course'+i">{{course}}</div>
         </div>
@@ -28,7 +28,7 @@
 
       <h1 class="h1-left">SKILLS</h1>
       <div v-for="(skillset,key) in skills" v-bind:key="'skillset'+key" class="skill">
-        <div class="plus"><h2 class="h2-small">+ {{key}}</h2>
+        <div class="plus"><B>{{key}}</B>
           <div class="enumerates">
           <div v-for="(skill, i) in skillset" v-bind:key="i" class="skill-item tag">{{skill}}</div>
           </div>
@@ -43,16 +43,16 @@
       <div v-for="(exp,key) in experience" v-bind:key="'exp'+key" class="exp">
         <h1 class="h1-right" v-if="key==0">EXPERIENCE</h1>
         <h2 class="h2-large">{{exp.name}}</h2>
-        <div ><a v-bind:href="exp.link">{{'+ '+exp.project}}</a></div>
+        <div ><a class="underline" v-bind:href="exp.link">{{exp.project}}</a></div>
         <div >{{exp.date}}</div>
         <div > {{exp.location}}</div>
         <div class="em">{{exp.title}}</div>
         <span class="bullet" v-for="(item, i) in exp.bullets" v-bind:key="'expbullet'+i">{{item}}</span>
       </div>
 
-      <a href="/#/project/"><h1 class="h1-right">PROJECTS →</h1></a>
+      <h1 class="h1-right"><a href="/#/project/">PROJECTS →</a></h1>
 
-      <div class="plus objective">
+      <div class="plus objective shadowed">
         <div>Looking for Software Engineering & Front-end Internship opportunities</div>
         <div style="margin-top:0.2em;"><v-icon name="envelope"/> zp82 @ cornell.edu </div>
       <div><span><v-icon name="brands/github"/> github.com/zeyap</span></div>
@@ -81,7 +81,7 @@ export default {
     }
   },
   mounted(){
-    // document.querySelector(".body").style.background = "#a2dae8";
+    // document.querySelector(".body").style.background = "#e96443";
     [this.$refs['resume-col-r']].forEach((target,id)=>{//this.$refs['resume-col-l'],
       addScrollListener.bind(this)(target,id);
     })

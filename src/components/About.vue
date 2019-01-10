@@ -2,7 +2,7 @@
 <template>
   <div class="about" ref="about">
     <div class="about-left">
-      <!-- <div style="height:100px; width:100px; background:#a2dae8; "></div> -->
+      <!-- <div style="height:100px; width:100px; background:#e96443; "></div> -->
      <div class='container container--realistic'>
       <div class='cube' ref="cubeani">
         <div class='face'></div>
@@ -14,7 +14,7 @@
     </div>
    <div class="about-right">
      <div class="about-intro">
-        <span class="h2-underline"><h2> Hi, I am Zeya Peng </h2></span>
+        <span><h2> Hi, I am Zeya Peng </h2></span>
         <div style="1em">&nbsp</div>
         <div>Currently a master student on Information Science at Cornell University.</div>
         <div style="1em">&nbsp</div>
@@ -22,7 +22,7 @@
         <div>I mind scalability and performance behind the scene. </div>
         <div style="1em">&nbsp</div>
         <div v-for="(question, key) in questions" v-bind:key="'q'+key">
-        <a v-bind:href="question.url" ref="about-q"><h2 class="about-q">{{question.q}}</h2></a>
+        <a v-bind:href="question.url" class="underline" ref="about-q"><h2 class="about-q">{{question.q}}</h2></a>
         <!-- <div class="about-info" v-for="(item, i) in question.info" v-bind:key="'qinfo-'+i">{{item}}</div> -->
         </div>
       </div>

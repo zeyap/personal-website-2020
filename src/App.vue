@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- <div class="page-banner" v-on:mouseover="onMouseoverFab"></div> -->
-    <a target="_blank" href="https://zeyap.github.io/static/resume_zeyapeng_dev.pdf"><FAB class="fab" name="paperclip" name_after="arrow-down" style="z-index:4" type="fade-through" border="true" color="#ffa389" v-bind:position="fabPos">
+    <a target="_blank" href="https://zeyap.github.io/static/resume_zeyapeng_dev.pdf"><FAB class="fab" name="paperclip" name_after="arrow-down" style="z-index:4" type="fade-through" border="true" color="#904e95" v-bind:position="fabPos">
     </FAB></a>
     <div class="page-title" ref="page-title" v-on:mouseover="shownav">{{pageTitle}}</div>
 
@@ -28,7 +28,7 @@ export default {
   },
   data(){
     return {
-      colors:['#a2dae8','#ffffff','#ffede8'],//#e3c0c0
+      colors:['#e96443','#ffffff','#904e95'],//#e3c0c0
       urls:["/resume/","/project/","/about/"],
       pageTitle: 'ZEYA PENG',
       mouseoverQueue: [],
@@ -76,11 +76,12 @@ export default {
     }
   },
   mounted(){
-    this.$refs['page-title'].style.color = '#a2dae8';
-    this.$refs['page-title'].style.border = 'solid 1px #a2dae8';
-    this.$refs['page-title'].style['box-shadow']='2px 2px #a2dae8';
+    this.$refs['page-title'].style.color = '#e96443';
+    this.$refs['page-title'].style.border = 'solid 1px #e96443';
+    this.$refs['page-title'].style['border-radius'] = '5px';
+    this.$refs['page-title'].style['box-shadow']='2px 2px #e96443';
     addScrollListener.bind(this)(this.$refs.routerview,2);
-    // window.document.querySelector('#app').style.background="#a2dae8";
+    // window.document.querySelector('#app').style.background="#e96443";
     this.analytics()
   }
 }
@@ -91,9 +92,9 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 18px;
-  color: #353535;
-  /* background: #a2dae8; */
+  font-size: 16px;
+  color: #797979;
+  /* background: #e96443; */
 
   /* text-align:justify; */
 }
@@ -113,7 +114,7 @@ export default {
   position: absolute;
   top: 25px;
   right: 160px;
-  font-size: 28px;
+  font-size: 1.2em;
   background: white;
   padding: 0 0.3em;
   /* font-weight: bolder; */

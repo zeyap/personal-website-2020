@@ -5,58 +5,53 @@
     <div class="headmargin">&nbsp</div>
 
     <div v-for="(project,key) in projects" v-bind:key="'project-card'+key" class="project">
-      <div v-if="key%2===0">
-        <div class="project-card">
+      
+      <img v-if="project.img && key%2===0" v-bind:src="project.img" class="project-picture-img shadowed"/>
+        <div class="project-card" v-if="key%2===0">
           <div class="project-card-title">
-            <span class="project-links"><a v-if="project.github" target="_blank" v-bind:href="project.github"><v-icon name="brands/github"/></a>&nbsp
-            <a v-if="project.link" target="_blank" v-bind:href="project.link"><v-icon name="external-link-alt"/></a></span>
-          <h2 class="h2-small" style="color: #ffa389">{{project.name}}</h2>
+          <h2 class="h2-small" style="color: #904e95">{{project.name}}</h2>
             <div><span class="tag tag-dark" v-for="(tag, i) in project.tags" v-bind:key="'projtag'+i">{{tag}}</span></div>
             </div>
             <div class="project-brief">
           <span v-for="(item, i) in project.bullets" v-bind:key="'projbullet'+i">{{item}}</span>
           </div>
+          <span class="project-links"><a class="shadowed" v-if="project.github" target="_blank" v-bind:href="project.github"><v-icon name="brands/github"/></a>
+            <a class="shadowed" v-if="project.link" target="_blank" v-bind:href="project.link"><v-icon name="external-link-alt"/> Try it</a></span>
           
         </div>
-        <!-- <div class="project-picture-wrap"> -->
-        <div class="project-picture">
-          <img v-if="project.img" v-bind:src="project.img" class="project-picture-img"/>
-        </div>
-        <!-- </div> -->
-      </div>
+        
+        
 
-      <div v-if="key%2===1">
-        <div class="project-card project-card-left">
+        <img v-if="project.img && key%2===1" v-bind:src="project.img" class="project-picture-img project-picture-right shadowed"/>
+
+        <div class="project-card project-card-left" v-if="key%2===1">
           <div class="project-card-title">
-            <span class="project-links"><a v-if="project.github" target="_blank" v-bind:href="project.github"><v-icon name="brands/github"/>&nbsp</a>
-            <a v-if="project.link" target="_blank" v-bind:href="project.link"><v-icon name="external-link-alt"/></a></span>
           <h2 class="h2-small">{{project.name}}</h2>
           <div><span class="tag tag-dark" v-for="(tag, i) in project.tags" v-bind:key="'projtag'+i">{{tag}}</span></div>
           </div>
           <div class="project-brief">
           <span v-for="(item, i) in project.bullets" v-bind:key="'projbullet'+i">{{item}}</span>
           </div>
+          <span class="project-links"><a class="shadowed" v-if="project.github" target="_blank" v-bind:href="project.github"><v-icon name="brands/github"/></a>
+            <a class="shadowed" v-if="project.link" target="_blank" v-bind:href="project.link"><v-icon name="external-link-alt"/> Try it</a></span>
         </div>
-        <!-- <div class="project-picture-wrap"> -->
-        <div class="project-picture project-picture-right">
-          <img v-if="project.img" v-bind:src="project.img" class="project-picture-img"/>
-        </div>
-        <!-- </div> -->
-      </div>
+        
+        
+
     </div>
 
     <div class="projects-other" ref="projects-other">
     <div class="project projects-other-inner" style="height: auto">
       <div v-for="(project,key) in other"  v-bind:key="'otherproject'+key" class="project-other">
         <div>
-          <h2 class="h2-small font-dark"><a v-bind:href="project.link">{{project.name}}</a></h2>
+          <B class="font-dark"><a v-bind:href="project.link">{{project.name}}</a></B>
           <div><span class="tag tag-dark" v-for="(tag, i) in project.tags" v-bind:key="'projtag'+i">{{tag}}</span></div>
           </div>
           <div class="project-other-brief">
           <span v-for="(item, i) in project.bullets" v-bind:key="'projbullet'+i">{{item}}</span>
           </div>
-          <span class="project-other-links"><a v-if="project.github" target="_blank" v-bind:href="project.github"><v-icon name="brands/github"/>&nbsp</a>
-            <a v-if="project.link" target="_blank" v-bind:href="project.link"><v-icon name="external-link-alt"/></a></span>
+          <span class="project-other-links"><a  v-if="project.github" target="_blank" v-bind:href="project.github"><v-icon name="brands/github"/></a>&nbsp
+            <a  v-if="project.link" target="_blank" v-bind:href="project.link"><v-icon name="external-link-alt"/></a></span>
       </div>
     </div>
     </div>
@@ -101,7 +96,7 @@ export default {
   opacity:0;
   transition: opacity 1s;
   overflow: auto;
-  /* background: white; */
+  /* background: #eeeeee; */
 }
 
 </style>
