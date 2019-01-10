@@ -42,9 +42,7 @@ var pageExpand = function(){
     tweenbuttons.style['transition-delay'] = "0s";
     // tweenbuttons.style['pointer-event']='none';
     // tweenbuttons.style['z-index']='0';
-    
-
-    if(window.matchMedia("(max-aspect-ratio: 1/1)").matches && window.title==="resume"){
+    if(window.matchMedia("(max-aspect-ratio: 1/1)").matches && resumecol[1].scrollTop>0 && window.title==="resume"){
         routerwrapper.scrollTo({top:routerwrapper.scrollHeight,behavior: "smooth"});
     }
     

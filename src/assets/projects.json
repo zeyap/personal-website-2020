@@ -1,8 +1,16 @@
 {"projects":[
     {
+        "name":"Let Me Check: General-Purpose Tracking App",
+        "date":"11/2018 - 12/2018",
+        "img":"https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/images/lmc.png",
+        "link":["Try it","https://jackandcoke.herokuapp.com/"],
+        "github":"https://github.com/zeyap/LMCheck-tracking-app",
+        "tags":["Progressive Web App","Responsive UI","VueJS","d3.js"],
+        "bullets":["Designed responsive UI and led development of a single-page progressive web app for mobile devices, allowing a wide range of tracking purpose and granularity."]
+    },
+    {
         "name":"SecurityCentral - Red Hat",
         "date":"08/2018 - Present",
-        "link":"https://github.com/SecurityCentral/ui-mockup",
         "github":"https://github.com/SecurityCentral/ui-mockup",
         "img":"https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/images/securitycentral.png",
         "tags":["Graduate Capstone","Web","React"],
@@ -12,14 +20,14 @@
         "date":"09/2018 - Present",
         "github":"https://github.com/zeyap/zeyap.github.io/tree/dev",
         "img":"https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/images/personal.png",
-        "link":"zeyap.xyz",
+        "link":["Live Demo","zeyap.xyz"],
         "tags":["Vue","CSS"],
         "bullets":["Created Personal Website Template by Vue.js and Pure CSS, also using the Vue 2.5 material design button library I am building."]
     },{
         "name":"Cubicle: A Visuospatial Training Game",
         "date":"07/2017 - 09/2017",
         "img":"https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/images/cubicles.png",
-        "link":"http://cascade.cs.illinois.edu/cubicle.html",
+        "link":["Learn more","http://cascade.cs.illinois.edu/cubicle.html"],
         "github":"https://github.com/ShiliangZuo/Cubicle",
         "publication":"https://dl.acm.org/citation.cfm?id=3172954",
         "tags":["Human-Computer Interaction","Unity3D"],
@@ -28,14 +36,22 @@
 ],
 "other":[
     {
+        "name":"Days Matter: Countdown PWA",
+        "date":"10/2018 - 11/2018",
+        "github":"https://github.com/zeyap/Countdown-pwa",
+        "link":"https://zp82-homework-05.herokuapp.com/",
+        "tags":["Vue","PWA"],
+        "bullets":["A countdown progressive web app."]
+    },
+    {
         "name":"Vue Library for Material Design Button",
-        "date":"09/2018 - Present",
+        "date":"09/2018 - ",
         "github":"https://github.com/zeyap/vue-material-motion",
         "tags":["Open Source","Vue","CSS"],
         "bullets":["Button component made with Material Design Motion (Tweening, Fading, Shared Transformation, etc.) on Vue 2.5."]
     },{
         "name":"NewsViz",
-        "date":"07/2018 - Present",
+        "date":"07/2018 - ",
         "github":"https://github.com/zeyap/news_viz",
         "tags":["Web","Python","Django","ElasticSearch","React Native"],
         "bullets":["Developed back-end of a meme-sourcing mobile Web App to pull out and cluster headline articles from Internet, using Django and ElasticSearch.","Created front-end with React Native."]

@@ -16,7 +16,7 @@
           <span v-for="(item, i) in project.bullets" v-bind:key="'projbullet'+i">{{item}}</span>
           </div>
           <span class="project-links"><a class="shadowed" v-if="project.github" target="_blank" v-bind:href="project.github"><v-icon name="brands/github"/></a>
-            <a class="shadowed" v-if="project.link" target="_blank" v-bind:href="project.link"><v-icon name="external-link-alt"/> Try it</a></span>
+            <a class="shadowed" v-if="project.link" target="_blank" v-bind:href="project.link[1]"><v-icon name="external-link-alt"/> {{project.link[0]}}</a></span>
           
         </div>
         
@@ -33,7 +33,7 @@
           <span v-for="(item, i) in project.bullets" v-bind:key="'projbullet'+i">{{item}}</span>
           </div>
           <span class="project-links"><a class="shadowed" v-if="project.github" target="_blank" v-bind:href="project.github"><v-icon name="brands/github"/></a>
-            <a class="shadowed" v-if="project.link" target="_blank" v-bind:href="project.link"><v-icon name="external-link-alt"/> Try it</a></span>
+            <a class="shadowed" v-if="project.link" target="_blank" v-bind:href="project.link[1]"><v-icon name="external-link-alt"/> Try it</a></span>
         </div>
         
         
@@ -41,7 +41,7 @@
     </div>
 
     <div class="projects-other" ref="projects-other">
-    <div class="project projects-other-inner" style="height: auto">
+    <div class="projects-other-inner" style="height: auto">
       <div v-for="(project,key) in other"  v-bind:key="'otherproject'+key" class="project-other">
         <div>
           <B class="font-dark"><a v-bind:href="project.link">{{project.name}}</a></B>
@@ -96,7 +96,7 @@ export default {
   opacity:0;
   transition: opacity 1s;
   overflow: auto;
-  /* background: #eeeeee; */
+  background: #eeeeee;
 }
 
 </style>
