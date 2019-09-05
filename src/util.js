@@ -14,79 +14,28 @@ var addScrollListener = function(target,id){
 };
 var checkComponent=function(){
     if(window.routerwrapper===undefined)
-        window.routerwrapper = document.querySelector('.router-wrapper');
-    if(window.resumecol===undefined)
-        window.resumecol = document.querySelectorAll('.resume-col');
-    if(window.pagetitle===undefined)
-        window.pagetitle = document.querySelector('.page-title');
-    if(window.tweenbuttons===undefined)
-        window.tweenbuttons = document.querySelector('.tweenbuttons');
+      window.routerwrapper = document.querySelector('.router-wrapper');
+    if(window.pageBanner===undefined){
+      window.pageBanner = document.querySelector('.page-title');
+    }
         
 }
 var pageExpand = function(){
     checkComponent();
-    // if(routerwrapper.style.height == "calc(100vh - 40px)")return;
-    // routerwrapper.style.height = "100vh";
-    // routerwrapper.style.margin = "40px 0 0px 0";
-    
-    // resumecol.forEach((col)=>{
-    //     col.style.height = "calc(100vh - 40px)";
-    // })
-    pagetitle.style.top="8px";
-    pagetitle.style.right="40px";
-    pagetitle.style.transition="top 0.5s, right 0.5s";
-    pagetitle.style["transition-delay"]= "0s, 0.5s";
 
-    tweenbuttons.style.opacity = "0";
-    tweenbuttons.style.transition = "opacity 0.5s";
-    tweenbuttons.style['transition-delay'] = "0s";
-    // tweenbuttons.style['pointer-event']='none';
-    // tweenbuttons.style['z-index']='0';
-    if(window.matchMedia("(max-aspect-ratio: 1/1)").matches && resumecol[1].scrollTop>0 && window.title==="resume"){
-        routerwrapper.scrollTo({top:routerwrapper.scrollHeight,behavior: "smooth"});
-    }
-    
-    // if(window.projectsOther){
-    //     projectsOther.style.setProperty('display', '');
-    //     console.log(projectsOther.getBoundingClientRect())
-    //     if(projectsOther.style.opacity == 0){
-    //         projectsOther.style.opacity = 1;
-    //         projectsOther.style.transition = "opacity 1s";
-    //     }
-    // }else{
-    //     window.projectsOther = document.querySelector('.projects-other');
-    // }
-    
+    window.pageBanner.style['box-shadow'] = '0 2px 6px rgba(138, 138, 138, 0.25)';
+    window.pageBanner.style['transition'] = 'box-shadow 0.5s';
     
 }
 
 var pageShrink = function(){
+  // reaches top
     checkComponent();
-    // if(routerwrapper.style.height == "calc(100vh - 60px)")return;
-    // routerwrapper.style.height = "calc(100vh - 60px)";
-    // routerwrapper.style.margin = "60px 0 0px 0";
-    
-    // resumecol.forEach((col)=>{
-    //     col.style.height = "calc(100vh - 60px)";
-    // })
-    
-    pagetitle.style.top="25px";
-    pagetitle.style.right="160px";
-    pagetitle.style.transition="top 0.5s, right 0.5s";
-    pagetitle.style["transition-delay"]= "0.5s, 0s";
-
-    tweenbuttons.style.opacity = "1";
-    tweenbuttons.style.transition = "opacity 0.5s";
-    tweenbuttons.style['transition-delay'] = "0.5s";
-    // tweenbuttons.style['z-index']='3';
-    // resumecol[1].style['pointer-event']='auto';
-
+    window.pageBanner.style['box-shadow'] = 'none';
 }
 
 var clearRouterviewComponent = function(){
-    // window.routerwrapper = undefined;
-    window.resumecol = undefined;
-    // window.pagetitle = undefined;
+    
 }
 
 export {addScrollListener, pageShrink, clearRouterviewComponent};

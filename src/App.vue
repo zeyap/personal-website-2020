@@ -1,14 +1,17 @@
 <template>
   <div id="app">
-    <!-- <div class="page-banner" v-on:mouseover="onMouseoverFab"></div> -->
     <a target="_blank" href="https://zeyap.github.io/static/resume_zeyapeng_dev.pdf"><FAB class="fab" name="paperclip" name_after="arrow-down" style="z-index:4" type="fade-through" border="true" color="#904e95" v-bind:position="fabPos">
     </FAB></a>
-    <div class="page-title" ref="page-title" v-on:mouseover="shownav">{{pageTitle}}</div>
-
-    <TweenWrapper class="tweenbuttons" ref="tween" border="true" radius="20px" v-bind:color="colors" button_number="3" v-bind:position="{top:'40px',right:'40px'}"
-    v-bind:urls="urls" v-bind:on_mouseover_fns="onMouseover">
-    </TweenWrapper>
-
+    
+    <div class="page-title" ref="page-title" v-on:mouseover="shownav">
+      <div>
+        <span class="page-title-name">{{pageTitle}}</span>
+      </div>
+      <div>
+        <span class="page-title-section">ME</span>
+        <span class="page-title-section">PROJECTS</span>
+      </div>
+    </div>
     <div ref="routerview" class="router-wrapper">
       <router-view/>
     </div>
@@ -17,42 +20,18 @@
 </template>
 
 <script>
-import {TweenWrapper,FAB} from '../../vue-material/src/index.js'
+import {FAB} from '../../vue-material/src/index.js'
 import {addScrollListener, pageShrink, pageExpand, clearRouterviewComponent} from './util.js'
 
 export default {
   name: 'App',
   components:{
-    TweenWrapper,
     FAB
   },
   data(){
     return {
-      colors:['#e96443','#ffffff','#904e95'],//#e3c0c0
-      urls:["/resume/","/project/","/about/"],
+      urls:["/project/"],
       pageTitle: 'ZEYA PENG',
-      mouseoverQueue: [],
-      onMouseover:[(function(){
-        this.pageTitle='RESUME';
-        this.recoverName();
-      }).bind(this),
-      (function(){
-        this.pageTitle='PROJECT';
-        this.recoverName();
-      }).bind(this),
-      (function(){
-        this.pageTitle='ABOUT';
-        this.recoverName();
-      }).bind(this)],
-      recoverName:function(){
-        while(this.mouseoverQueue.length>0){
-          window.clearTimeout(this.mouseoverQueue.pop());
-        }
-        
-        this.mouseoverQueue.push(window.setTimeout((function(){
-          this.pageTitle = 'ZEYA PENG';
-        }).bind(this),2000));
-      },
       lastScrollTop: [],
       fabPos: {right:'40px',bottom:'10px'}
     }
@@ -76,10 +55,6 @@ export default {
     }
   },
   mounted(){
-    this.$refs['page-title'].style.color = '#e96443';
-    this.$refs['page-title'].style.border = 'solid 1px #e96443';
-    this.$refs['page-title'].style['border-radius'] = '5px';
-    this.$refs['page-title'].style['box-shadow']='2px 2px #e96443';
     addScrollListener.bind(this)(this.$refs.routerview,2);
     // window.document.querySelector('#app').style.background="#e96443";
     this.analytics()
@@ -88,44 +63,40 @@ export default {
 </script>
 
 <style>
+body{
+  margin: 0;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   color: #797979;
-  /* background: #e96443; */
-
-  /* text-align:justify; */
-}
-
-.page-banner{
-  width: calc(100vw - 200px);
-  height: 60px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
 }
 
 .page-title{
-  
+  padding: 15px 40px;
   z-index: 2;
-  position: absolute;
-  top: 25px;
-  right: 160px;
-  font-size: 1.2em;
-  background: white;
-  padding: 0 0.3em;
-  /* font-weight: bolder; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  background: #f8f8f8;
+}
+
+.page-title-name{
+  font-size: 1.2em; padding: 0 0.3em; background: white; color:#e96443; border: solid 1px #e96443; border-radius: 5px; box-shadow: 2px 2px #e96443
+}
+
+.page-title-section{
+  letter-spacing: 2px;
+  margin-left: 10px;
 }
 
 .router-wrapper{
   margin: 0 0 0 0;
-  position: absolute;
-  top: 0px;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 52px);
   overflow: auto;
   /* transition: all 0.5s; */
 }
@@ -138,9 +109,6 @@ export default {
   background-color: white;
 }
 
-.tweenbuttons{
-  
-}
 @media (max-aspect-ratio: 1/1){
   .fab{
     opacity: 0;
