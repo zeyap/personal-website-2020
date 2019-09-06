@@ -34,7 +34,7 @@
           <div><span class="tag" v-for="(tag, i) in project.tags" v-bind:key="'projtag'+i">{{tag}}</span></div>
         </div>
         
-        <a v-bind:href="project.link"><img v-bind:src="project.img" class="project-picture-img shadowed"/></a>
+        <a target="_blank" v-bind:href="project.link"><img v-bind:src="project.img" class="project-picture-img shadowed"/></a>
       </div>
     </div>
 
