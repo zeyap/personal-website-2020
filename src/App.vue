@@ -8,8 +8,8 @@
         <span class="page-title-name">{{pageTitle}}</span>
       </div>
       <div>
-        <span class="page-title-section">ME</span>
-        <span class="page-title-section">PROJECTS</span>
+        <span class="page-title-section" style="color: #e96443" id="button-me">ME</span>
+        <span class="page-title-section" id="button-projects">PROJECTS</span>
       </div>
     </div>
     <div ref="routerview" class="router-wrapper">
@@ -91,6 +91,7 @@ body{
 .page-title-section{
   letter-spacing: 2px;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .router-wrapper{

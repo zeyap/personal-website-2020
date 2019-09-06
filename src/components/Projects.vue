@@ -3,7 +3,7 @@
   <div>
     <div class="inner-wrapper">
 
-    <div>
+    <div id="section-me">
       <div class="headmargin">&nbsp</div>
       <p style="margin-bottom:0">Frontend Engineer passionate about creating friendly, pixel perfect & performant user interfaces</p>
       <p style="margin:0">2nd year Master student at Cornell Information Science</p>
@@ -15,15 +15,16 @@
         <a class="underline contact" target="_blank" href="https://zeyap.github.io/static/resume_zeyapeng_dev.pdf">Resume</a>
       </div>
     </div>
-
-    <div v-for="(project,key) in [...projects, ...other]" v-bind:key="'project-card'+key">
-      <div>
-        <h2 class="h2-small" style="color: #904e95">{{project.name}}</h2>
-        <div><span class="tag" v-for="(tag, i) in project.tags" v-bind:key="'projtag'+i">{{tag}}</span></div>
-      </div>
-      
-      <img v-bind:src="project.img" class="project-picture-img shadowed"/>
+    <div id="section-projects">
+      <div class="project" v-for="(project,key) in [...projects, ...other]" v-bind:key="'project-card'+key">
+        <div>
+          <h2 class="h2-small" style="color: #904e95">{{project.name}}</h2>
+          <div><span class="tag" v-for="(tag, i) in project.tags" v-bind:key="'projtag'+i">{{tag}}</span></div>
+        </div>
         
+        <img v-bind:src="project.img" class="project-picture-img shadowed"/>
+          
+      </div>
     </div>
   </div>
 
@@ -46,10 +47,6 @@ export default {
     }
   },
   mounted(){
-     
-    setTimeout((function(){
-      this.$refs.projects.style.opacity = 1;
-    }).bind(this),200);
     window.title = "projects"
      document.querySelector("body").style.background = "#ffffff"
   },
@@ -57,8 +54,7 @@ export default {
     
   },
   beforeDestroy(){
-    this.$refs['projects'].style.opacity = "0";
-    this.$refs['projects'].style.transition = "opacity 1s";
+    
   }
 }
 </script>
@@ -72,10 +68,11 @@ export default {
 }
 
 .projects{
-  opacity:0;
-  transition: opacity 1s;
   overflow: auto;
   background: #eeeeee;
+}
+.project{
+  opacity: 0;
 }
 
 </style>
