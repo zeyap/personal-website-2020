@@ -1,45 +1,48 @@
 {"projects":[
     {
-        "name":"NYC Taxi Fare Real-time Prediction",
+        "name":"NYC Taxi Trip Real-time Prediction",
         "date":"03/2019 - 05/2019",
+        "link":"/#/project/nyc_taxi_fare",
         "img":"https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/images/cover-nyc.png",
         "github":"https://github.com/zeyap/cs5412project",
         "tags":["d3.js", "Machine Learning"]
     },{
-        "name":"Visualization of US Pollution in 2000s",
-        "date":"04/2019 - 05/2019",
-        "img":"https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/images/cover-pollution.png",
-        "link":["Try it","https://justinjoco.github.io/us_pollution_in_2000s/"],
-        "github":"https://github.com/justinjoco/us_pollution_in_2000s",
-        "tags":["d3.js"]
-    },{
-        "name":"Pokemon Battle",
+        "name":"Visualization of Pokemon Relationship",
         "date":"03/2019 - 04/2019",
         "img":"https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/images/cover-pokemon.png",
-        "link":["Try it","https://justinjoco.github.io/us_pollution_in_2000s/"],
+        "link":"https://nameless-bayou-90852.herokuapp.com/",
         "github":"https://github.com/jerryxu1204/3300",
         "tags":["d3.js", "Vue"]
     },{
+        "name":"Visualization of US Pollution in 2000s",
+        "date":"04/2019 - 05/2019",
+        "img":"https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/images/cover-pollution.png",
+        "link":"https://mysterious-beach-23896.herokuapp.com/",
+        "github":"https://github.com/justinjoco/us_pollution_in_2000s",
+        "tags":["d3.js"]
+    },{
+        "name":"Classification Banner in Patternfly V3- Red Hat",
+        "date":"04/2019 - 05/2019",
+        "link":"https://www.patternfly.org/v3/pattern-library/communication/classification-banner/",
+        "github":"https://github.com/SecurityCentral/ui-mockup",
+        "img":"https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/images/cover-securitycentral.png",
+        "tags":["Graduate Capstone","Web","React"],
+        "bullets":["An Open Source web project, aims to improve the workflow experience of security workers in government."]
+    },
+    {
         "name":"Let Me Check: General-Purpose Tracking App",
         "date":"11/2018 - 12/2018",
         "img":"https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/images/cover-lmc.png",
-        "link":["Try it","https://jackandcoke.herokuapp.com/"],
+        "link":"https://jackandcoke.herokuapp.com/",
         "github":"https://github.com/zeyap/LMCheck-tracking-app",
         "tags":["Progressive Web App","Responsive UI","VueJS","d3.js"],
         "bullets":["Designed responsive UI and led development of a single-page progressive web app for mobile devices, allowing a wide range of tracking purpose and granularity."]
     },
     {
-        "name":"SecurityCentral - Red Hat",
-        "date":"08/2018 - Present",
-        "github":"https://github.com/SecurityCentral/ui-mockup",
-        "img":"https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/images/cover-securitycentral.png",
-        "tags":["Graduate Capstone","Web","React"],
-        "bullets":["An Open Source web project, aims to improve the workflow experience of security workers in government."]
-    },{
         "name":"Cubicle: A Visuospatial Training Game",
         "date":"07/2017 - 09/2017",
         "img":"https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/images/cover-cubicles.png",
-        "link":["Learn more","http://cascade.cs.illinois.edu/cubicle.html"],
+        "link":"http://cascade.cs.illinois.edu/cubicle.html",
         "github":"https://github.com/ShiliangZuo/Cubicle",
         "publication":"https://dl.acm.org/citation.cfm?id=3172954",
         "tags":["Human-Computer Interaction","Unity3D"],

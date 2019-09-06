@@ -24,17 +24,17 @@
       <div>
         <a class="underline contact" href="mailto:zp82 @ cornell.edu">Email</a> 
         <a class="underline contact" href="https://github.com/zeyap">Github</a> 
-        <a class="underline contact" target="_blank" href="https://zeyap.github.io/raw/dev/static/resume_zeyapeng_dev.pdf">Resume</a>
+        <a class="underline contact" target="_blank" href="https://zeyap.github.io/static/resume_zeyapeng_dev.pdf">Resume</a>
       </div>
     </div>
     <div id="section-projects">
-      <div class="project" v-for="(project,key) in [...projects, ...other]" v-bind:key="'project-card'+key">
+      <div v-for="(project,key) in [...projects, ...other]" v-bind:key="'project-card'+key">
         <div>
           <h2 class="h2-small" style="color: #904e95">{{project.name}}</h2>
           <div><span class="tag" v-for="(tag, i) in project.tags" v-bind:key="'projtag'+i">{{tag}}</span></div>
         </div>
         
-        <img v-bind:src="project.img" class="project-picture-img shadowed"/>
+        <a v-bind:href="project.link"><img v-bind:src="project.img" class="project-picture-img shadowed"/></a>
       </div>
     </div>
 
@@ -76,9 +76,6 @@ export default {
 .projects{
   overflow: auto;
   background: #eeeeee;
-}
-.project{
-  opacity: 0;
 }
 
 </style>

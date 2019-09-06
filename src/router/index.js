@@ -18,7 +18,7 @@ export default new Router({
       }
     },
     {
-      path: '/project',
+      path: '/project/:name',
       name: 'Project',
       component: Project,
       meta: {
