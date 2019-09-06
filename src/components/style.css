@@ -192,3 +192,61 @@
   .shadowed:hover{
     box-shadow: 0 5px 20px rgba(138, 138, 138, 0.25), 0 3px 3px rgba(0,0,0,0.22);
   }
+
+  /* page title & fab button*/
+
+  .page-title{
+    padding: 15px 40px;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: #f8f8f8;
+    position: sticky;
+    top: 0;
+    width: calc(100% - 80px);
+  }
+  
+  .page-title-name{
+    font-size: 1.2em; padding: 0 0.3em; background: white; color:#e96443; border: solid 1px #e96443; border-radius: 5px; box-shadow: 2px 2px #e96443
+  }
+  
+  .page-title-section{
+    letter-spacing: 2px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .router-wrapper{
+    margin: 0 0 0 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    /* transition: all 0.5s; */
+  }
+  
+  .router-wrapper::-webkit-scrollbar{
+    width: 0em;
+    background-color: white;
+  }
+  .router-wrapper::-webkit-scrollbar-thumb{
+    background-color: white;
+  }
+  
+  @media (max-aspect-ratio: 1/1){
+    .fab{
+      opacity: 0;
+      transition: 0.5s;
+    }
+  }
+  @media (min-aspect-ratio: 1/1){
+    .fab{
+      opacity: 1;
+      transition: 0.5s;
+    }
+  }
+  
+  .fab{
+    font-size: 0.9em;
+  }

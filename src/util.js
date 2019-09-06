@@ -1,11 +1,14 @@
 var addScrollListener = function(target,id){
   checkSectionsAndButtons();
-  window.buttons['me'].addEventListener('click',()=>{
-    window.sections['me'].scrollIntoView({behavior: "smooth"});
-  })
-  window.buttons['projects'].addEventListener('click',()=>{
-    window.sections['projects'].scrollIntoView({behavior: "smooth"});
-  })
+  if(window.sections['me']&&window.sections['projects']){
+    window.buttons['me'].addEventListener('click',()=>{
+      window.sections['me'].scrollIntoView({behavior: "smooth"});
+    })
+    window.buttons['projects'].addEventListener('click',()=>{
+      window.sections['projects'].scrollIntoView({behavior: "smooth"});
+    })
+  }
+  
   const onScroll = (function(){
     var st = target.pageYOffset || target.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
     
@@ -44,6 +47,9 @@ var checkSectionsAndButtons = function(){
 var onSectionsInView = function(st){
     checkSectionsAndButtons();
     // when projects section or me section is at top, highlight the button at navigation banner
+    if(!window.sections['me'] || !window.sections['projects']){
+      return;
+    }
     if(window.sections['me'].scrollHeight>st){
       window.buttons['projects'].style['color']='#797979';
       window.buttons['me'].style['color']='#e96443';

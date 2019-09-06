@@ -1,6 +1,18 @@
 // eslint-disable-next-line
 <template>
   <div>
+    <a target="_blank" href="https://zeyap.github.io/static/resume_zeyapeng_dev.pdf"><FAB class="fab" name="paperclip" name_after="arrow-down" style="z-index:4" type="fade-through" border="true" color="#904e95" v-bind:position="fabPos">
+    </FAB></a>
+      
+    <div class="page-title" ref="page-title">
+      <div>
+        <span class="page-title-name">{{pageTitle}}</span>
+      </div>
+      <div>
+        <span class="page-title-section" style="color: #e96443" id="button-me">ME</span>
+        <span class="page-title-section" id="button-projects">PROJECTS</span>
+      </div>
+    </div>
     <div class="inner-wrapper">
 
     <div id="section-me">
@@ -12,7 +24,7 @@
       <div>
         <a class="underline contact" href="mailto:zp82 @ cornell.edu">Email</a> 
         <a class="underline contact" href="https://github.com/zeyap">Github</a> 
-        <a class="underline contact" target="_blank" href="https://zeyap.github.io/static/resume_zeyapeng_dev.pdf">Resume</a>
+        <a class="underline contact" target="_blank" href="https://zeyap.github.io/raw/dev/static/resume_zeyapeng_dev.pdf">Resume</a>
       </div>
     </div>
     <div id="section-projects">
@@ -23,38 +35,32 @@
         </div>
         
         <img v-bind:src="project.img" class="project-picture-img shadowed"/>
-          
       </div>
     </div>
-  </div>
 
-  <div class="headmargin">&nbsp</div>
-  <div class="headmargin">&nbsp</div>
-  <div class="headmargin">&nbsp</div>
+    <div class="headmargin">&nbsp</div>
+    <div class="headmargin">&nbsp</div>
+    <div class="headmargin">&nbsp</div>
+    </div>
   </div>
 </template>
 
 <script>
+import {FAB} from '../../../vue-material/src/index.js'
 import projects from '../assets/projects.json'
 
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
+  components:{
+    FAB
+  },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
       projects: projects.projects,
-      other:projects.other
+      other:projects.other,
+      pageTitle: 'ZEYA PENG',
+      fabPos: {right:'40px',bottom:'10px'}
     }
-  },
-  mounted(){
-    window.title = "projects"
-     document.querySelector("body").style.background = "#ffffff"
-  },
-  created(){
-    
-  },
-  beforeDestroy(){
-    
   }
 }
 </script>

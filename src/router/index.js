@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Projects from '@/components/Projects'
+import Project from '@/components/Project'
 
 Vue.use(Router)
 
-const titlePrefix = "Zeya Peng | "
+const titlePrefix = "Zeya Peng"
 
 export default new Router({
   routes: [
@@ -13,16 +14,16 @@ export default new Router({
       name: 'Projects',
       component: Projects,
       meta: {
-          title: titlePrefix + 'Projects'
+          title: titlePrefix
       }
     },
     {
       path: '/project',
-      name: 'Projects',
-      component: Projects,
+      name: 'Project',
+      component: Project,
       meta: {
-          title: titlePrefix + 'Projects'
+          title: titlePrefix
       }
-    }
+    },
   ]
 })
