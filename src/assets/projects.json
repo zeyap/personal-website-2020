@@ -1,5 +1,11 @@
 {"projects":[
     {
+        "name":"Teddy: Modeling by Freeform Stroke",
+        "date":"11/2019 - 12/2019",
+        "link":"https://intense-basin-67871.herokuapp.com/",
+        "github":"https://github.com/zeyap/teddy",
+        "tags":["WebGL", "Computer Graphics"]
+    },{
         "name":"NYC Taxi Trip Real-time Prediction",
         "date":"03/2019 - 05/2019",
         "link":"/#/project/nyc_taxi_fare",
