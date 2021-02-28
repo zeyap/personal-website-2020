@@ -11,17 +11,19 @@
       <div>
         <span class="page-title-section" style="color: #e96443" id="button-me">ME</span>
         <span class="page-title-section" id="button-projects">PROJECTS</span>
+        <span class="page-title-section"><a href="https://www.instagram.com/zeyapdraws/" target="_blank">ILLUSTRATION</a></span>
       </div>
     </div>
     <div class="inner-wrapper">
 
     <div id="section-me">
       <div class="headmargin">&nbsp</div>
-      <p style="margin-bottom:0">Frontend Engineer based in NYC, passionate about creating friendly, pixel perfect & performant user interfaces</p>
-      <p style="margin-top:0">Born and raised in Changsha, China and went on for university at Hangzhou & Ithaca NY</p>
+      <p style="margin-bottom:0">Frontend Engineer at Facebook NYC, recent master graduate from Cornell, <a href="https://en.wikipedia.org/wiki/Zhejiang_University">ZJU</a> alumni</p>
+      <p style="margin-top:0; margin-bottom:0">Spent first 18 years of my life in <a href="https://en.wikipedia.org/wiki/Changsha">Changsha, China</a></p>
+      <p style="margin-top:0">In spare time I'm very into making graphic stuff <a href="https://www.instagram.com/zeyapdraws/">@zeyapdraws</a></p>
       
       <div>
-        <a class="underline contact" href="mailto:zp82 @ cornell.edu">Email</a> 
+        <a class="underline contact" href="mailto:zeyapeng@outlook.com">Email</a> 
         <a class="underline contact" href="https://github.com/zeyap">Github</a> 
         <a class="underline contact" target="_blank" href="https://zeyap.github.io/static/resume_zeyapeng_dev.pdf">Resume</a>
       </div>

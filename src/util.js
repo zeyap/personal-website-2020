@@ -2,10 +2,10 @@ var addScrollListener = function(target,id){
   checkSectionsAndButtons();
   if(window.sections['me']&&window.sections['projects']){
     window.buttons['me'].addEventListener('click',()=>{
-      window.sections['me'].scrollIntoView({behavior: "smooth"});
+      window.sections['me'].scrollIntoView( {behavior: "smooth", block: "start"});
     })
     window.buttons['projects'].addEventListener('click',()=>{
-      window.sections['projects'].scrollIntoView({behavior: "smooth"});
+      window.sections['projects'].scrollIntoView({behavior: "smooth", block: "start"});
     })
   }
   
