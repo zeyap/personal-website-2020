@@ -16,12 +16,12 @@
     </div>
     <div style="width: 900px; margin: auto">
         <video width="900" autoplay="autoplay">
-            <source src="https://github.com/zeyap/zeyap.github.io/raw/dev/src/assets/media/nyctaxiprediction.mov">
+            <source src="/2020/static/media/nyctaxiprediction.mov">
         </video>
     </div>
     <div class="inner-wrapper">
         <div class="headmargin">&nbsp</div>
-        <a href="/">← Back to homepage</a>
+        <a href="/2020/">← Back to homepage</a>
         <div class="headmargin">&nbsp</div>
         <div class="headmargin">&nbsp</div>
         <div class="headmargin">&nbsp</div>
