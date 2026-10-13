@@ -1,0 +1,6 @@
+{
+  "framework": null,
+  "buildCommand": "NODE_OPTIONS=--openssl-legacy-provider npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [{ "source": "/2020/:path*", "destination": "/:path*" }]
+}
